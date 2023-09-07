@@ -1,0 +1,102 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+.col-1{
+  flex-basis: 100%;
+}
+.col-2{
+  flex-basis: 2;
+}
+.block{
+  background-color: rgb(232, 250, 255);
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+img.small{
+  height: 8rem;
+  width: 100%;
+  border-radius: 5px;
+}
+.order-child{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: white;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 5%;
+   
+}
+.btn{
+  font-size: 18px;
+  border: 0px;
+  border-radius: 50%;
+  padding: 10px 15px;
+  margin: 5px;
+}
+.newImage{
+  padding: 5px;
+  height: 100%;
+  width: 20vh;
+  border-radius: 5px;
+  border: 1px solid rgb(194, 191, 191);
+}
+#newOrder{
+  display: flex;
+  gap:5px;
+}
+.buttonBox{
+ padding: 5px;
+ 
+ /* border: 2px solid black; */
+}
+.title1{
+  padding: 5px;
+  text-align: center;
+ margin-top: -20px;
+ 
+ /* border: 2px solid blue; */
+}
+.deleteBtn{
+  background-color: rgb(242, 103, 103);
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 8px;
+}
+.cartBtn{
+  background-color: rgb(146, 231, 146);
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 7px;
+}
+.dollarSign{
+  font-weight: 500;
+  text-align: center;
+  font-size: 18px;
+}
+/* .nameItem{
+  float: right;
+} */
+@media screen and (min-width: 80px) {
+  .col-1{
+    flex: 1;
+  }
+  .col-2{
+    flex: 2;
+  }
+}
