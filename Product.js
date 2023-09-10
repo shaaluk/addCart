@@ -1,35 +1,40 @@
 import React from "react";
 
 function Product(props) {
-    const { product, setBasketData, basketData} = props;
+  const { product, setBasketData, basketData } = props;
 
-    return (
-        <div className="order-child">
-            <img className="small" src={product.image} alt="no-img" />
-            <h3>{product.name}</h3>
-            <div>{product.content}</div>
-            <div>${product.price}</div>
+  let newProduct = product;
+  newProduct.total = product?.price * product?.qty;
 
-            <div>
+  return (
+    <div className="order-child">
+      <img className="small" src={product.image} alt="no-img" />
+      <h3>{product.name}</h3>
+      <div>{product.content}</div>
+      <div>${product.price}</div>
 
-                <button className="cartBtn" onClick={() => {
-                   let uniqueData = basketData?.find((data)=>data?.id === product?.id)
-                    console.log("basketData",uniqueData)
-                    if (uniqueData === null || uniqueData === undefined) {
-                        setBasketData((data) => [...data, product]);  
-                    }
-                    else{
-                       window.alert("Item is already added");
-                    }
-                }}>Add to Cart</button>
-                   
-            </div>
-        </div>
-    );
-
+      <div>
+        <button
+          className="cartBtn"
+          onClick={() => {
+            let uniqueData = basketData?.find(
+              (data) => data?.id === product?.id
+            );
+            console.log("basketData", uniqueData);
+            if (uniqueData === null || uniqueData === undefined) {
+              setBasketData((data) => [...data, newProduct]);
+            } else {
+              window.alert("Item is already added");
+            }
+          }}
+        >
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  );
 }
 export default Product;
-
 
 //   let cart =[];
 
