@@ -21,7 +21,7 @@ function Home(){
    <Navbar/>
    <div className="row">
     <Main products={products} setBasketData={setBasketData} basketData={basketData}/>
-    <Basket basketData={basketData} onDelete={deleteItem} />
+    <Basket basketData={basketData} onDelete={deleteItem} setBasketData={setBasketData} />
      
    
     </div>
